@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Project 2 Report</title>
+        <style>
+            :root {
+                --color-neutral-95: hsl(220 10% 95%);
+                --color-neutral-90: hsl(220 10% 90%);
+                --color-neutral-80: hsl(220 10% 80%);
+                --color-neutral-70: hsl(220 10% 70%);
+                --color-neutral-60: hsl(220 10% 60%);
+                --color-neutral-50: hsl(220 10% 50%);
+                --color-neutral-40: hsl(220 10% 40%);
+                --color-neutral-30: hsl(220 10% 30%);
+                --color-neutral-20: hsl(220 10% 20%);
+                --color-neutral-10: hsl(220 10% 10%);
+            }
+
+            html {
+                font: 100%/1.5 system-ui;
+                counter-reset: figure;
+                background: var(--color-neutral-95);
+                max-width: min(75vw, 80em);
+                margin: 0 auto;
+            }
+
+            /* Headings */
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                line-height: 1.1;
+                font-weight: 600;
+                text-wrap: balance;
+            }
+
+            h1,
+            h2 {
+                border-bottom: 1px solid var(--color-neutral-80);
+                padding-bottom: 0.2em;
+            }
+
+            h1 {
+                margin-block: 1em 0.5rem;
+                font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+                font-weight: 800;
+
+                small {
+                    display: block;
+                    width: fit-content;
+                    padding: 0.2em 0.5em;
+                    margin-inline: auto;
+                    color: white;
+                    background: var(--color-neutral-40);
+                    font-size: 40%;
+                    text-transform: uppercase;
+                    white-space: nowrap;
+                }
+            }
+
+            h2 {
+                font-size: 180%;
+                color: var(--color-neutral-30);
+            }
+
+            h3 {
+                font-size: 130%;
+            }
+
+            /* Lists */
+
+            ul,
+            ol {
+                padding-inline-start: 2em;
+            }
+
+            li {
+                &::marker {
+                    color: var(--color-neutral-40);
+                }
+
+                + li {
+                    margin-top: 0.2em;
+                }
+            }
+
+            /* Sectioning elements */
+
+            header {
+                padding-block: 1em;
+                text-align: center;
+            }
+
+            main {
+                background: white;
+                color: var(--color-neutral-20);
+                border-radius: 1rem;
+                padding: 0.1rem 2rem;
+            }
+
+            /* Figures */
+
+            figure {
+                margin: 1em 0;
+                padding: 0.5rem;
+                margin-inline: -0.5em;
+                border: 1px solid var(--color-neutral-80);
+                box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+                text-align: center;
+                background: white;
+
+                > figcaption {
+                    font: 500 75% var(--font-sans);
+                    background: var(--color-neutral-95);
+                    padding: 0.5rem;
+                    margin: -0.5rem;
+                    margin-top: 0.5rem;
+                    counter-increment: figure;
+                    text-align: left;
+
+                    &::before {
+                        content: "Figure " counter(figure) ": ";
+                        font-weight: bold;
+                        color: var(--color-neutral-40);
+                    }
+
+                    a:not(:hover, :focus, :active) {
+                        color: inherit;
+                        text-decoration: underline;
+                        text-decoration-color: color-mix(
+                            in lab,
+                            currentColor,
+                            transparent 70%
+                        );
+                    }
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                <small>Project 2</small>
+                Persuasive or Deceptive Visualization?
+            </h1>
+
+            <p><strong>Kevin Cheng</strong> — <em>kec077@ucsd.edu</em></p>
+            <p><strong>Leo Zubiate</strong> — <em>lzubiate@ucsd.edu</em></p>
+            <p><strong>Jonathan Adrian</strong> — <em>jladrian@ucsd.edu </em></p>
+        </header>
+
+        <main>
+            <h2>Proposition: Renewable Energy has gained traction incredibly quickly</h2>
+
+            <section>
+                <h3>FOR the Proposition</h3>
+
+                <figure>
+                    <img src="for.png" alt="" width="100%"/>
+                    <figcaption>Shows how renewable energy has seen a 44.8% growth over the last decade.</figcaption>
+                </figure>
+
+                <p>Design Decisions and Rationale:</p>
+
+                <ul>
+                    <li>Truncated Y-Axis (-1)</li>
+                    <ul><li>We decided to have the y-axis start at 20% which makes the increase in renewable electricity’s share seem like a more steep incline, as it seems like we are starting from the bottom and rapidly climbing. The values are accurate, but the perception changes to try to make the viewer think that renewable energy is transitioning more rapidly
+</li></ul>
+                    <li>Relative Growth Annotation (-1)</li>
+                    <ul><li>We highlighted 44.8% relative increase because it seems like a larger number comparative to the actual 10% point increase. Seeing a bigger number makes the growth appear to be more substantial, which furthers our argument that renewable energy is progressing quickly.
+</li></ul>
+                    <li>Renewable Energy Share Calculation (+1)</li>
+                    <ul><li>We got our stat by aggregating wind, solar, hydro, and bioenergy generation from the groupings given, and dividing their combined output by the combination + fossil-fuel generation. It doesn’t contain all other sources, but just goes to show the growing importance and attempt at taking over fossil fuels. 
+</li></ul>
+                    <li>Green coloring and upward directional arrow (-0.5)</li>
+                    <ul><li>The green coloring is meant to show progress (as green is represented with good), as well as just environmental progress in general, as green is represented with environmental things too. The upward arrow is trying to emphasize that the graph is trending upwards.
+</li></ul>
+                    <li>Positive title (-1)</li>
+                    <ul><li>The graph can be interpreted as showing the fact that fossil fuels do still dominate the share of electricity, but our title and emphasis on the graph emphasized the pattern that renewable energy is growing, making the transition feel more successful and in reach to taking over from fossil fuels.
+</li></ul>
+                </ul>
+            </section>
+
+            <section>
+                <h3>AGAINST the Proposition</h3>
+
+                <figure>
+                    <img src="against.png" alt="" width="100%" />
+                    <figcaption>Renewable energy seems like it will take about 120 years to match non-renewable energy.</figcaption>
+                </figure>
+
+                <p>Design Decisions and Rationale:</p>
+
+                <ul>
+                    <li>Data extrapolation (-2)</li>
+                    <ul><li>The projected growth in renewable energy was calculated by 
+                        taking the mean between the last two years, 2021-2022. This method
+                         of projection assumes that the growth will remain constant for the
+                          entire ~100 growth period, which is not accurate as technology 
+                          will advance over time. Because this was meant to completely deceive the reader, it earns a -2 score. This choice makes the graph more persuasive since it seems
+                             like it will take much longer than it actually will for renewable
+                              energy to grow. Because of how fundamental this decision was, it
+                               went well with relatively little downsides. The other alternatives
+                                were different methods of projection; this method was the best at
+                                 underrepresenting growth without making extreme assumptions like
+                                  renewable energy declining or other similar ideas.</li></ul>
+                    <li>Color coding projection (-1)</li>
+                    <ul><li>The projected years were made brighter than the actual numbers, and since they take up more space on the graph it makes it seem like they are the real measured values. This adds a sense of credibility and makes the visualization more persuasive. Since the color coding also helps the reader see the split between projected and not projected, this isn't entirely deceptive and thus earns a -1. </li></ul>
+                    <li>Annotations (+1)</li>
+                    <ul><li>The annotation gives a concrete idea of how long it will take based on the projected numbers. This makes it a lot clearer that renewable energy isn't advancing quickly at this pace, as most people would not live to their 120th birthday. The annotation is not necessarily deceptive, but it is based on misleading projections. This is why it earns a +1 score.</li></ul>
+                    <li>Energy proportion (-1.5)</li>
+                    <ul><li>By using the share of total energy produced via renewable means, the actual amount of energy is obscured. Even if renewable energy is producing a lot of usable energy, comparing it to the total amount of energy produced makes it seem less significant. This further drives the point that renewable energy is too slow. Since this is meant to make renewable energy seem bad but isn't completely targeted, it is rated at -1.5. Other alternatives include changing the scale or truncating the y-axis, as these could both be used to make renewable energy seem worse. However, they would both be quite obvious. Using proportions affects the data itself, not the actual visualization, making it harder to detect.</li></ul>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Final Reflection</h2>
+
+                <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
+            </section>
+        </main>
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"c822b88e119346678db149ed7b7721c9","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
