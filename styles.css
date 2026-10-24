@@ -114,3 +114,20 @@ label.color-scheme {
   right: 2rem;
   font-size: 80%;
 }
+
+dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-row:  */
+  /* grid-column: 1/-1; */
+}
+
+dt {
+  grid-row: 1;
+}
+
+dd {
+  grid-row: 2;
+  margin:0;
+  font-size: 200%;
+}
