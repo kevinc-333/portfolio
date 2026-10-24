@@ -1,0 +1,67 @@
+[
+    {
+        "title": "DSC106 Portfolio",
+        "year": 2026,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "You're looking at this project right now, isn't that so neat?"
+    },
+    {
+        "title": "CSA Data Lab",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "This was a thing I did for my high school AP CSA class, where I really didn't learn that much about CS. It was pretty fun though."
+    },
+    {
+        "title": "ABA Advanced Catalogue",
+        "year": 2026,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "A tool that catalogues and allows sorting of every character and move in ABA. Demonstrates use of GenAI coding tools to accelerate the development path."
+    },
+    {
+        "title": "Project 1",
+        "year": 2026,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "The graph I made for Project 1. I put the two bar charts on the same y-axis, which is invalid; splitting it into two subgraphs would've been good."
+    },
+    {
+        "title": "Project 2",
+        "year": 2026,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Two graphs we made for Project 2. I worked with my project teammates to construct both graphs and reflect on what we learned."
+    },
+    {
+        "title": "Animi ex fugit inventore.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Illum, aperiam! A iste laborum id cum recusandae. Quasi laboriosam velit adipisci officiis ipsa consequatur, quod at. Architecto delectus beatae id omnis, cum voluptatem mollitia quibusdam soluta adipisci! Facilis, beatae."
+    },
+    {
+        "title": "Officia eos explicabo adipisci?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Nulla, aliquid ex! Accusamus tempore magnam, veritatis nobis mollitia fugit. Dolor dicta, aspernatur illo blanditiis animi quae dolorem, doloremque necessitatibus adipisci libero molestiae perspiciatis odio dignissimos, esse consequuntur quasi est?"
+    },
+    {
+        "title": "Dignissimos porro cum quam?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Sapiente asperiores nam nobis, delectus praesentium sit ab vero expedita officia? Laboriosam optio molestias, ea adipisci dolorum aliquam eius vel illo asperiores sapiente quae itaque eligendi saepe culpa quibusdam esse?"
+    },
+    {
+        "title": "Quia quis qui dignissimos.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Repellat excepturi aspernatur a, similique minima, praesentium optio nesciunt fugiat aliquid dignissimos numquam ipsam earum, et soluta mollitia quidem aliquam nostrum non voluptatum repudiandae. Dolores aperiam reiciendis temporibus sint vero?"
+    },
+    {
+        "title": "Suscipit sit totam illum.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Consectetur pariatur sunt corrupti, porro voluptates non rerum accusamus repudiandae vel qui inventore placeat ducimus asperiores voluptas necessitatibus quisquam facilis sequi aut libero animi obcaecati. Deserunt distinctio nam asperiores nostrum?"
+    },
+    {
+        "title": "Quod nobis quidem laborum!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Architecto saepe nam voluptatum, similique asperiores illum placeat ut hic explicabo. Cum hic ullam eaque, in non, optio architecto laborum tempore vero inventore reprehenderit earum odit, corrupti repellat ex fugit."
+    },
+    {
+        "title": "Magnam vitae veniam sed!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "At unde dolorem beatae harum repellendus asperiores, perspiciatis voluptatum cumque eius error placeat iure tempora doloremque recusandae sapiente explicabo in fugit tempore est temporibus cupiditate? Eum atque delectus minima voluptatibus."
+    }
+]
