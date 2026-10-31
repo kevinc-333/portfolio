@@ -131,3 +131,65 @@ dd {
   margin:0;
   font-size: 200%;
 }
+
+div.container {
+  display:flex;
+  gap: 5%;
+  align-items:center;
+}
+
+/* Pie Chart for Projects Page */
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  /* overflow: visible; */
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
+/* Legend for Projects Page */
+ul.legend {
+  flex:1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1em;
+  border-width: 2px;
+  border-color: grey;
+  border-style: solid;
+  padding: 15px;
+  margin: 5px;
+}
+li.legend-item {
+  display:flex;
+  align-items: center;
+  gap: 0.3em;
+  min-width: 7em;
+  
+}
+span.swatch {
+  display: inline-block;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 25%;
+  
+}
+
+
+
