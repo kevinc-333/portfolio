@@ -12,6 +12,31 @@ projectTitle.textContent = `${Object.keys(projects).length} Projects`;
 
 
 let selectedIndex = -1;
+let query = '';
+
+
+function filterProjects() {
+    let filteredProjects = projects.filter((project) => {
+        let values = Object.values(project).join('\n').toLowerCase();
+        return values.includes(query.toLowerCase());
+    });
+
+    if (selectedIndex !== -1) {
+        let rolledData = d3.rollups(
+            projects,
+            (v) => v.length,
+            (d) => d.year,
+        );
+
+        let data = rolledData.map(([year, count]) => ({ value: count, label: year }));
+
+        filteredProjects = filteredProjects.filter((project) => {
+            return project.year === data[selectedIndex].label;
+        });
+    }
+
+    renderProjects(filteredProjects, projectsContainer, 'h2');
+}
 
 // Pie chart and legend
 function renderPieChart(projects) {
@@ -48,16 +73,8 @@ function renderPieChart(projects) {
                 legend
                     .selectAll('li')
                     .attr('class', (_, i) => (i === selectedIndex ? 'legend-item selected' : 'legend-item'));
-                if (selectedIndex === -1) {
-                    renderProjects(projects, projectsContainer, 'h2');
-                } else {
-                    let filteredProjects = projects.filter((project) => {
-                    return project.year === data[selectedIndex].label;
-                    });
-
-            
-                    renderProjects(filteredProjects, projectsContainer, 'h2');
-                }
+                
+                filterProjects();
             })
             ;
     });
@@ -76,7 +93,7 @@ renderPieChart(projects);
 
 // Search bar
 
-let query = '';
+
 let searchInput = document.querySelector('.searchBar');
 searchInput.addEventListener('input', (event) => {
 
@@ -85,12 +102,5 @@ searchInput.addEventListener('input', (event) => {
     query = event.target.value;
     // console.log(query);
     // TODO: filter the projects
-    let filteredProjects = projects.filter((project) => {
-        let values = Object.values(project).join('\n').toLowerCase();
-        console.log(project);
-        return values.includes(query.toLowerCase());
-    });
-
-    renderPieChart(filteredProjects);
-    renderProjects(filteredProjects, projectsContainer, 'h2');
+    filterProjects();
 });
