@@ -191,5 +191,67 @@ span.swatch {
   
 }
 
+g.gridlines {
+  opacity: 10%;
+}
 
+dl.info {
+  /* font-size: 50%; */
+  display: grid;
+  grid-template-columns: auto 1fr; /* Column 1 for <dt>, Column 2 for <dd> */
+  gap: 0.5rem 1.5rem;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+  dt, dd {
+    margin: 0;
+  }
 
+  dt {
+    opacity: 0.3;
+  }
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tooltip {
+  font-size: 50%;
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  /* background-color: white; */
+  box-shadow: 3px 1px 3px black;
+  padding: 5px;
+  backdrop-filter: blur(10px);
+}
+
+circle {
+  fill: oklch(from var(--color-accent) 55% 45% h);
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
