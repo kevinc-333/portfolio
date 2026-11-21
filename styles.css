@@ -1,19 +1,23 @@
+/* =========================
+   Global site styles
+   ========================= */
+
 html {
   --color-accent: oklch(60% 0.20 300);
   accent-color: var(--color-accent);
-  background-color: light-dark(oklch(from var(--color-accent) 95% 25% h), oklch(from var(--color-accent) 25% 25% h));
+  background-color: light-dark(
+    oklch(from var(--color-accent) 95% 25% h),
+    oklch(from var(--color-accent) 25% 25% h)
+  );
   color-scheme: light;
 }
 
 body {
-  /* Set line height to 1.5 times the font size
-	   and use the OS’s UI font as the website font
-	 */
+  /* Set line height to 1.5 times the font size and use the OS UI font. */
   font: 130%/1.5 system-ui;
   max-width: 100ch;
   margin-inline: auto;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-inline: 5px;
 }
 
 nav {
@@ -21,9 +25,7 @@ nav {
 
   display: flex;
   margin-bottom: 10px;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 a {
@@ -35,18 +37,13 @@ a {
 }
 
 a.current {
-  border-bottom-width: 0.4em;
+  border-bottom: 0.4em solid var(--border-color);
   padding-bottom: 0.1em;
-  border-bottom-color: var(--border-color);
-  border-bottom-style: solid;
 }
 
 a:hover {
-  border-bottom-width: 0.4em;
+  border-bottom: 0.4em solid var(--color-accent);
   padding-bottom: 0.1em;
-  border-bottom-color: var(--color-accent);
-  border-bottom-style: solid;
-  /* background-color: color-mix(in oklch, var(--color-accent), canvas 85%); */
 }
 
 form {
@@ -70,15 +67,14 @@ button {
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
 }
 
-div.projects{
+div.projects {
   article {
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-  gap: 1em;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    gap: 1em;
+  }
 }
-}
-
 
 h2 {
   margin: 0;
@@ -88,7 +84,6 @@ h1 {
   font-size: 4rem;
   line-height: 1.1;
   text-wrap: balance;
-  
 }
 
 h2, h3, h4, h5, h6 {
@@ -98,6 +93,7 @@ h2, h3, h4, h5, h6 {
 
 section {
   padding-bottom: 5em;
+
   article {
     padding-top: 0.5em;
   }
@@ -105,7 +101,6 @@ section {
 
 li {
   padding-bottom: 1em;
-  
 }
 
 label.color-scheme {
@@ -118,8 +113,6 @@ label.color-scheme {
 dl {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-row:  */
-  /* grid-column: 1/-1; */
 }
 
 dt {
@@ -128,21 +121,20 @@ dt {
 
 dd {
   grid-row: 2;
-  margin:0;
+  margin: 0;
   font-size: 200%;
 }
 
 div.container {
-  display:flex;
+  display: flex;
   gap: 5%;
-  align-items:center;
+  align-items: center;
 }
 
-/* Pie Chart for Projects Page */
+/* Pie chart for Projects page */
 #projects-pie-plot {
   max-width: 20em;
   margin-block: 2em;
-  /* overflow: visible; */
 }
 
 &:has(path:hover) {
@@ -150,6 +142,7 @@ div.container {
     opacity: 0.5;
   }
 }
+
 path {
   transition: 300ms;
   cursor: pointer;
@@ -163,32 +156,30 @@ path {
   }
 }
 
-/* Legend for Projects Page */
+/* Legend for Projects page */
 ul.legend {
-  flex:1;
+  flex: 1;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
   gap: 1em;
-  border-width: 2px;
-  border-color: grey;
-  border-style: solid;
+  border: 2px solid grey;
   padding: 15px;
   margin: 5px;
 }
+
 li.legend-item {
-  display:flex;
+  display: flex;
   align-items: center;
   gap: 0.3em;
   min-width: 7em;
-  
 }
+
 span.swatch {
   display: inline-block;
   height: 100%;
   aspect-ratio: 1 / 1;
   background-color: var(--color);
   border-radius: 25%;
-  
 }
 
 g.gridlines {
@@ -196,12 +187,12 @@ g.gridlines {
 }
 
 dl.info {
-  /* font-size: 50%; */
   display: grid;
-  grid-template-columns: auto 1fr; /* Column 1 for <dt>, Column 2 for <dd> */
+  grid-template-columns: auto 1fr;
   gap: 0.5rem 1.5rem;
   transition-duration: 500ms;
   transition-property: opacity, visibility;
+
   dt, dd {
     margin: 0;
   }
@@ -221,17 +212,21 @@ dl.info[hidden]:not(:hover, :focus-within) {
   position: fixed;
   top: 1em;
   left: 1em;
-  /* background-color: white; */
   box-shadow: 3px 1px 3px black;
   padding: 5px;
   backdrop-filter: blur(10px);
 }
 
+/* Scatter plot styling (Labs 6–8) */
 circle {
   fill: oklch(from var(--color-accent) 55% 45% h);
   transition: 200ms;
   transform-origin: center;
   transform-box: fill-box;
+
+  @starting-style {
+    r: 0;
+  }
 }
 
 circle:hover {
@@ -240,7 +235,7 @@ circle:hover {
 
 @keyframes marching-ants {
   to {
-    stroke-dashoffset: -8; /* 5 + 3 */
+    stroke-dashoffset: -8;
   }
 }
 
@@ -254,4 +249,74 @@ circle:hover {
 
 circle.selected {
   fill: #ff6b6b;
+}
+
+/* Lab 8 commit slider */
+#commit-slider {
+  flex: 1;
+  align-items: baseline;
+}
+
+#commit-slider time {
+  margin-left: auto;
+}
+
+/* Lab 8 file unit visualization */
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+
+  > div {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+
+  dt {
+    grid-column: 1;
+  }
+
+  dd {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    align-content: start;
+    gap: 0.15em;
+    padding-top: 0.6em;
+    margin-left: 0;
+  }
+}
+
+#files .loc {
+  display: block;
+  flex: 0 0 auto;
+  width: 0.3em;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color, var(--color-accent));
+}
+
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+#scrolly-1 > * {
+  flex: 1;
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  height: 50vh;
+}
+
+#scatter-story .step {
+  padding-bottom: 30vh;
 }
